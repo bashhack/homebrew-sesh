@@ -5,13 +5,13 @@
 class Sesh < Formula
   desc "Terminal-first toolkit for secure credential workflows"
   homepage "https://github.com/bashhack/sesh"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bashhack/sesh/releases/download/v0.1.1/sesh_Darwin_x86_64.zip"
-      sha256 "944c27361e0f86994974b190571b413da91ca52bcefe19590c7f92eec781ca4e"
+      url "https://github.com/bashhack/sesh/releases/download/v0.1.2/sesh_Darwin_x86_64.zip"
+      sha256 "b40ea472783af53fff5e502c7b1f13f19139646baf58b9c68b868fed47eec999"
 
       define_method(:install) do
         bin.install "sesh"
@@ -20,8 +20,8 @@ class Sesh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bashhack/sesh/releases/download/v0.1.1/sesh_Darwin_arm64.zip"
-      sha256 "6bbc2635323887c43d5f43d6e530336a90d26a748d5bc6655d4194dc167aa323"
+      url "https://github.com/bashhack/sesh/releases/download/v0.1.2/sesh_Darwin_arm64.zip"
+      sha256 "90177f937827acf7d40701f8a755c9f3c730ec4345d786ff9ff269e8a6b3cc3b"
 
       define_method(:install) do
         bin.install "sesh"
@@ -33,8 +33,8 @@ class Sesh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bashhack/sesh/releases/download/v0.1.1/sesh_Linux_x86_64.tar.gz"
-      sha256 "50f37119b3358c2d54836b0e6ac4907dc3275e2c0d16df88ae9f529e6322fe58"
+      url "https://github.com/bashhack/sesh/releases/download/v0.1.2/sesh_Linux_x86_64.tar.gz"
+      sha256 "33b2fab5e860a53825443879d56795eb666a5b39e77055ca2e35d83e6a07dc66"
       define_method(:install) do
         bin.install "sesh"
         # sesh completion bash|zsh|fish, into Homebrew's completion folders.
@@ -42,8 +42,8 @@ class Sesh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bashhack/sesh/releases/download/v0.1.1/sesh_Linux_arm64.tar.gz"
-      sha256 "c4763e56a8e4668215906397579f1881ebb734cfc65f94101debb50eebdac124"
+      url "https://github.com/bashhack/sesh/releases/download/v0.1.2/sesh_Linux_arm64.tar.gz"
+      sha256 "03a080e132ccfcbce5d3317ee71d4088431baa0948a40468727ff58d9f7a12b8"
       define_method(:install) do
         bin.install "sesh"
         # sesh completion bash|zsh|fish, into Homebrew's completion folders.
